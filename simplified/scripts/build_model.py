@@ -11,7 +11,7 @@ in2cm = 2.54
 
 
 class GIV_reactor:
-    def __init__(self, core_h5m, CAD_rods=True, burst_rod_h5m,control_rod_h5m,
+    def __init__(self, core_h5m, burst_rod_h5m,control_rod_h5m, CAD_rods=True,
             fuel=None,operating_temp=977.59,batches=20,inactive=5,particles=1000,
             padding=0, shim_rod_z=[0,0,0], ctrl_rod_z=0, output_dir='.'):
 
@@ -220,5 +220,5 @@ class GIV_reactor:
         self.model.export_to_model_xml()
 
 if __name__=='__main__':
-    ARE=ARE_reactor(sys.argv[1],sys.argv[2],sys.argv[3])
-    ARE.export_to_xml()
+    GIV=GIV_reactor(sys.argv[1],sys.argv[2],sys.argv[3])
+    GIV.export_to_xml()
