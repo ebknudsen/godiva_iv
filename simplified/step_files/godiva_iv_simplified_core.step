@@ -14,8 +14,8 @@ cturing Information (PMI)---4.0---2014-10-13',
 /* implementation_level */ '2;1');
 
 FILE_NAME(
-/* name */ '668d021a463ebf210af81fc5',
-/* time_stamp */ '2024-07-09T09:25:49Z',
+/* name */ '668d3ae32f0a57555b562ceb',
+/* time_stamp */ '2024-07-09T13:28:04Z',
 /* author */ (''),
 /* organization */ (''),
 /* preprocessor_version */ 'ST-DEVELOPER v20',
@@ -1857,34 +1857,34 @@ SURFACE()
 #362=CONTEXT_DEPENDENT_SHAPE_REPRESENTATION(#396,#5004);
 #363=CONTEXT_DEPENDENT_SHAPE_REPRESENTATION(#397,#5005);
 #364=CONTEXT_DEPENDENT_SHAPE_REPRESENTATION(#398,#5007);
-#365=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO1','clamp support',
-'clamp support',#5008,#5009,'');
-#366=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO2','clamp support',
-'clamp support',#5008,#5009,'');
+#365=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO1','clamp_support',
+'clamp_support',#5008,#5009,'');
+#366=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO2','clamp_support',
+'clamp_support',#5008,#5009,'');
 #367=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO3','subassembly_cover_plate',
 'subassembly_cover_plate',#5008,#5010,'');
 #368=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO4','clamp','clamp',#5008,#5011,
 '');
 #369=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO5','subassembly_plate_inner',
 'subassembly_plate_inner',#5008,#5012,'');
-#370=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO6','safety block',
-'safety block',#5008,#5013,'');
+#370=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO6','safety_block',
+'safety_block',#5008,#5013,'');
 #371=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO7','spindle','spindle',#5008,#5014,
 '');
-#372=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO8','clamp support',
-'clamp support',#5008,#5009,'');
-#373=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO9','fuel ring','fuel ring',#5008,
+#372=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO8','clamp_support',
+'clamp_support',#5008,#5009,'');
+#373=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO9','fuel_ring','fuel_ring',#5008,
 #5015,'');
 #374=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO10','support_pad_ring',
 'support_pad_ring',#5008,#5016,'');
-#375=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO11','safety block base',
-'safety block base',#5008,#5017,'');
+#375=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO11','safety_block_base',
+'safety_block_base',#5008,#5017,'');
 #376=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO12','clamp','clamp',#5008,#5011,
 '');
 #377=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO13','support_pad_ring',
 'support_pad_ring',#5008,#5018,'');
-#378=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO14','mounting plate',
-'mounting plate',#5008,#5019,'');
+#378=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO14','mounting_plate',
+'mounting_plate',#5008,#5019,'');
 #379=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO15','bearing_ring',
 'bearing_ring',#5008,#5020,'');
 #380=NEXT_ASSEMBLY_USAGE_OCCURRENCE('NAUO16','clamp','clamp',#5008,#5011,
@@ -4236,17 +4236,17 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 #2571=COLOUR_RGB('',0.372549019607843,0.654901960784314,0.23921568627451);
 #2572=COLOUR_RGB('',0.596078431372549,0.12156862745098,0.674509803921569);
 #2573=COLOUR_RGB('',0.0627450980392157,0.266666666666666,0.490196078431373);
-#2574=MANIFOLD_SOLID_BREP('clamp support',#2461);
+#2574=MANIFOLD_SOLID_BREP('clamp_support',#2461);
 #2575=MANIFOLD_SOLID_BREP('subassembly_cover_plate',#2462);
 #2576=MANIFOLD_SOLID_BREP('clamp',#2463);
 #2577=MANIFOLD_SOLID_BREP('subassembly_plate_inner',#2464);
-#2578=MANIFOLD_SOLID_BREP('safety block',#2465);
+#2578=MANIFOLD_SOLID_BREP('safety_block',#2465);
 #2579=MANIFOLD_SOLID_BREP('spindle',#2466);
-#2580=MANIFOLD_SOLID_BREP('fuel ring',#2467);
+#2580=MANIFOLD_SOLID_BREP('fuel_ring',#2467);
 #2581=MANIFOLD_SOLID_BREP('support_pad_ring',#2468);
-#2582=MANIFOLD_SOLID_BREP('safety block base',#2469);
+#2582=MANIFOLD_SOLID_BREP('safety_block_base',#2469);
 #2583=MANIFOLD_SOLID_BREP('support_pad_ring',#2470);
-#2584=MANIFOLD_SOLID_BREP('mounting plate',#2471);
+#2584=MANIFOLD_SOLID_BREP('mounting_plate',#2471);
 #2585=MANIFOLD_SOLID_BREP('bearing_ring',#2472);
 #2586=MANIFOLD_SOLID_BREP('support_pad_ring',#2473);
 #2587=SHAPE_DEFINITION_REPRESENTATION(#4977,#2601);
@@ -4266,17 +4266,17 @@ SHAPE_REPRESENTATION_RELATIONSHIP()
 #2601=SHAPE_REPRESENTATION('Core',(#2615,#2616,#2617,#2630,#2631,#2652,
 #2661,#2678,#2679,#2744,#2754,#2767,#2768,#2777,#2798,#2807,#2808,#2818),
 #4946);
-#2602=SHAPE_REPRESENTATION('clamp support',(#2615),#4947);
+#2602=SHAPE_REPRESENTATION('clamp_support',(#2615),#4947);
 #2603=SHAPE_REPRESENTATION('subassembly_cover_plate',(#2615),#4948);
 #2604=SHAPE_REPRESENTATION('clamp',(#2615),#4949);
 #2605=SHAPE_REPRESENTATION('subassembly_plate_inner',(#2615),#4950);
-#2606=SHAPE_REPRESENTATION('safety block',(#2615),#4951);
+#2606=SHAPE_REPRESENTATION('safety_block',(#2615),#4951);
 #2607=SHAPE_REPRESENTATION('spindle',(#2615),#4952);
-#2608=SHAPE_REPRESENTATION('fuel ring',(#2615),#4953);
+#2608=SHAPE_REPRESENTATION('fuel_ring',(#2615),#4953);
 #2609=SHAPE_REPRESENTATION('support_pad_ring',(#2615),#4954);
-#2610=SHAPE_REPRESENTATION('safety block base',(#2615),#4955);
+#2610=SHAPE_REPRESENTATION('safety_block_base',(#2615),#4955);
 #2611=SHAPE_REPRESENTATION('support_pad_ring',(#2615),#4956);
-#2612=SHAPE_REPRESENTATION('mounting plate',(#2615),#4957);
+#2612=SHAPE_REPRESENTATION('mounting_plate',(#2615),#4957);
 #2613=SHAPE_REPRESENTATION('bearing_ring',(#2615),#4958);
 #2614=SHAPE_REPRESENTATION('support_pad_ring',(#2615),#4959);
 #2615=AXIS2_PLACEMENT_3D('',#3317,#2819,#2820);
@@ -6622,7 +6622,7 @@ REPRESENTATION_CONTEXT('Core','TOP_LEVEL_ASSEMBLY_PART')
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
 GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#4961))
 GLOBAL_UNIT_ASSIGNED_CONTEXT((#4976,#4975,#4974))
-REPRESENTATION_CONTEXT('clamp support','COMPONENT_PART')
+REPRESENTATION_CONTEXT('clamp_support','COMPONENT_PART')
 );
 #4948=(
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
@@ -6646,7 +6646,7 @@ REPRESENTATION_CONTEXT('subassembly_plate_inner','COMPONENT_PART')
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
 GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#4965))
 GLOBAL_UNIT_ASSIGNED_CONTEXT((#4976,#4975,#4974))
-REPRESENTATION_CONTEXT('safety block','COMPONENT_PART')
+REPRESENTATION_CONTEXT('safety_block','COMPONENT_PART')
 );
 #4952=(
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
@@ -6658,7 +6658,7 @@ REPRESENTATION_CONTEXT('spindle','COMPONENT_PART')
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
 GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#4967))
 GLOBAL_UNIT_ASSIGNED_CONTEXT((#4976,#4975,#4974))
-REPRESENTATION_CONTEXT('fuel ring','COMPONENT_PART')
+REPRESENTATION_CONTEXT('fuel_ring','COMPONENT_PART')
 );
 #4954=(
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
@@ -6670,7 +6670,7 @@ REPRESENTATION_CONTEXT('support_pad_ring','COMPONENT_PART')
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
 GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#4969))
 GLOBAL_UNIT_ASSIGNED_CONTEXT((#4976,#4975,#4974))
-REPRESENTATION_CONTEXT('safety block base','COMPONENT_PART')
+REPRESENTATION_CONTEXT('safety_block_base','COMPONENT_PART')
 );
 #4956=(
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
@@ -6682,7 +6682,7 @@ REPRESENTATION_CONTEXT('support_pad_ring','COMPONENT_PART')
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
 GLOBAL_UNCERTAINTY_ASSIGNED_CONTEXT((#4971))
 GLOBAL_UNIT_ASSIGNED_CONTEXT((#4976,#4975,#4974))
-REPRESENTATION_CONTEXT('mounting plate','COMPONENT_PART')
+REPRESENTATION_CONTEXT('mounting_plate','COMPONENT_PART')
 );
 #4958=(
 GEOMETRIC_REPRESENTATION_CONTEXT(3)
@@ -6841,22 +6841,22 @@ SI_UNIT($,.METRE.)
 #5062=PRODUCT_RELATED_PRODUCT_CATEGORY('','',(#5076));
 #5063=PRODUCT_RELATED_PRODUCT_CATEGORY('','',(#5077));
 #5064=PRODUCT('Core','Core','Core',(#5092));
-#5065=PRODUCT('clamp support','clamp support','clamp support',(#5093));
+#5065=PRODUCT('clamp_support','clamp_support','clamp_support',(#5093));
 #5066=PRODUCT('subassembly_cover_plate','subassembly_cover_plate',
 'subassembly_cover_plate',(#5094));
 #5067=PRODUCT('clamp','clamp','clamp',(#5095));
 #5068=PRODUCT('subassembly_plate_inner','subassembly_plate_inner',
 'subassembly_plate_inner',(#5096));
-#5069=PRODUCT('safety block','safety block','safety block',(#5097));
+#5069=PRODUCT('safety_block','safety_block','safety_block',(#5097));
 #5070=PRODUCT('spindle','spindle','spindle',(#5098));
-#5071=PRODUCT('fuel ring','fuel ring','fuel ring',(#5099));
+#5071=PRODUCT('fuel_ring','fuel_ring','fuel_ring',(#5099));
 #5072=PRODUCT('support_pad_ring','support_pad_ring','support_pad_ring',
 (#5100));
-#5073=PRODUCT('safety block base','safety block base',
-'safety block base',(#5101));
+#5073=PRODUCT('safety_block_base','safety_block_base',
+'safety_block_base',(#5101));
 #5074=PRODUCT('support_pad_ring','support_pad_ring','support_pad_ring',
 (#5102));
-#5075=PRODUCT('mounting plate','mounting plate','mounting plate',(#5103));
+#5075=PRODUCT('mounting_plate','mounting_plate','mounting_plate',(#5103));
 #5076=PRODUCT('bearing_ring','bearing_ring','bearing_ring',(#5104));
 #5077=PRODUCT('support_pad_ring','support_pad_ring','support_pad_ring',
 (#5105));
