@@ -12,12 +12,13 @@ from contextlib import redirect_stdout,redirect_stderr
 
 # inputs
 #step_paths = [ 'step_files' / pl.Path('zpre_' + x + '.step') for x in ['control_rod','source','wout_fuel_v5','w_fuel_v5'][-2:]]
-step_paths = [ 'step_files' / pl.Path('godiva_iv_simplified_'+x+'.step') for x in ['core','BR','CR'] ] 
+step_paths = [ 'step_files' / pl.Path('godiva_iv_simplified_'+x+'.step') for x in ['core','BR','CR'] ]
+#step_paths = [ 'step_files' / pl.Path('godiva_iv_simplified_'+x+'.step') for x in ['case1','case2','case3','case4','case5'] ]
 #step_paths.reverse()
-h5m_paths = [ 'h5m_files' / pl.Path(s.name).with_suffix('.h5m') for s in step_paths ]
+h5m_paths = [ 'h5m_files2' / pl.Path(s.name).with_suffix('.h5m') for s in step_paths ]
 
 tags={
-    'control_rod':'control_rod',
+    'control_r.*':'control_rod',
     'fuel_ring':'fuel_ring',
     'safety_block':'safety_block',
     'spindle.*':'ss303',
@@ -39,14 +40,20 @@ for sf,hf in zip(step_paths,h5m_paths):
     a=ab.Assembly([str(sf)], verbose=2)
     tol=0.2
     atol=0.2
-    
-    a.implit_complement=None
+    if not 'core' in str(sf):
+        print('setting ic to helium')
+        a.implicit_complement='helium'
+    else:
+        print('unsetting ic')
+        a.implicit_complement=None
     a.threads=1
     ab.mesher_config['threads']=1
     ab.mesher_config['tolerance']=tol
     ab.mesher_config['angular_tolerance']=atol
     ab.mesher_config['verbose']=2
-    a.run(merge=True,backend='db',h5m_filename=hf, tolerance=tol, angular_tolerance=atol, tags=tags)
+    a.verbose=2
+    a.set_tag_delim('\s')
+    a.run(merge=True,backend='db',h5m_filename=hf, tolerance=tol, angular_tolerance=atol)#, tags=tags)
 
     try:
         #pass
