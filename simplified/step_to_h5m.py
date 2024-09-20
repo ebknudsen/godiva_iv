@@ -52,7 +52,7 @@ for sf,hf in zip(step_paths,h5m_paths):
     ab.mesher_config['angular_tolerance']=atol
     ab.mesher_config['verbose']=2
     a.verbose=2
-    a.set_tag_delim('\s')
+    a.set_tag_delim('\\s@')
     a.run(merge=True,backend='db',h5m_filename=hf, tolerance=tol, angular_tolerance=atol)#, tags=tags)
 
     try:
