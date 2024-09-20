@@ -117,7 +117,6 @@ class GIV_reactor:
         #import dagmc-geometry defining the reactor core
         du=openmc.DAGMCUniverse(self.core_h5m, auto_geom_ids=True)
 
-        self.bc=du.bounding_region()
 
         #rod universe geometries
         control_rod_du = openmc.DAGMCUniverse(self.control_rod_h5m, auto_geom_ids=True)
@@ -127,7 +126,7 @@ class GIV_reactor:
 
         BRz, CR1z, CR2z = self.BRz, *self.CRz
 
-        posBR=np.array( (-dr, 0.0, BRz) )
+        posBR=np.array( (-dr, 0.0, BRz-1e-2) )
         posCR1=np.array( (dr*math.cos(math.pi/3),dr*math.sin(math.pi/3), CR1z) )
         posCR2=np.array( (dr*math.cos(-math.pi/3),dr*math.sin(-math.pi/3), CR2z) )
 
@@ -135,9 +134,9 @@ class GIV_reactor:
         CR1_cyl=openmc.ZCylinder(r=2.34/2.0,x0=posCR1[0],y0=posCR1[1])
         CR2_cyl=openmc.ZCylinder(r=2.34/2.0,x0=posCR2[0],y0=posCR2[1])
 
-        BR_upper=openmc.ZPlane(z0=posBR[2]+1e-3)
-        CR1_upper=openmc.ZPlane(z0=posCR1[2]+1e-3)
-        CR2_upper=openmc.ZPlane(z0=posCR2[2]+1e-3)
+        BR_upper=openmc.ZPlane(z0=posBR[2])
+        CR1_upper=openmc.ZPlane(z0=posCR1[2])
+        CR2_upper=openmc.ZPlane(z0=posCR2[2])
 
         #find lowest z-coordinate
         bottomz = np.min( [U.bounding_box.lower_left[2] for U in [du,burst_rod_du,control_rod_du]])
@@ -158,13 +157,15 @@ class GIV_reactor:
 
         #core cell definition
         #core_region=self.bc & ~BR.region & ~BR_void.region & ~CR1.region & CR1_void.region & ~CR2.region & ~CR2_void.region
-        core_region=self.bc & ~BR.region & ~CR1.region & ~CR2.region
-        core = openmc.Cell(region=core_region, fill=du)
+        self.bc=du.bounding_region(padding_distance=5)
+
+        model_region=self.bc & ~BR.region & ~CR1.region & ~CR2.region
+        scene = openmc.Cell(region=model_region, fill=du)
 
         #define geometry
         root = openmc.Universe()
         #root.add_cells([core,BR,BR_void,CR1,CR1_void,CR2, CR2_void])
-        root.add_cells([core,BR,CR1,CR2])
+        root.add_cells([scene,BR,CR1,CR2])
 
         self.geometry = openmc.Geometry(root)
 
