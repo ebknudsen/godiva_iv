@@ -3,8 +3,8 @@
   <materials>
     <material id="1">
       <density units="atom/b-cm" value="0.088296"/>
-      <nuclide ao="0.00029749740525999996" name="C12"/>
-      <nuclide ao="3.3325947399999996e-06" name="C13"/>
+      <nuclide ao="0.00029749740525999996" name="C0"/>
+      <nuclide ao="3.3325947399999996e-06" name="C0"/>
       <nuclide ao="0.0015821" name="Si28"/>
       <nuclide ao="8.0109e-05" name="Si29"/>
       <nuclide ao="5.3177e-05" name="Si30"/>
@@ -37,8 +37,8 @@
     </material>
     <material id="2">
       <density units="atom/b-cm" value="0.087654"/>
-      <nuclide ao="0.001576341668" name="C12"/>
-      <nuclide ao="1.7658331999999997e-05" name="C13"/>
+      <nuclide ao="0.001576341668" name="C0"/>
+      <nuclide ao="1.7658331999999997e-05" name="C0"/>
       <nuclide ao="0.00034929" name="Si28"/>
       <nuclide ao="1.7686e-05" name="Si29"/>
       <nuclide ao="1.174e-05" name="Si30"/>
@@ -71,8 +71,8 @@
     </material>
     <material id="3">
       <density units="atom/b-cm" value="0.083675"/>
-      <nuclide ao="7.9332311762e-05" name="C12"/>
-      <nuclide ao="8.88688238e-07" name="C13"/>
+      <nuclide ao="7.9332311762e-05" name="C0"/>
+      <nuclide ao="8.88688238e-07" name="C0"/>
       <nuclide ao="0.00017855" name="Al27"/>
       <nuclide ao="7.9104e-05" name="Si28"/>
       <nuclide ao="4.0054e-06" name="Si29"/>
@@ -135,14 +135,14 @@
     <material id="5">
       <density units="atom/b-cm" value="0.078158"/>
       <nuclide ao="0.033161" name="H1"/>
-      <nuclide ao="0.037474210268" name="C12"/>
-      <nuclide ao="0.00041978973199999995" name="C13"/>
+      <nuclide ao="0.037474210268" name="C0"/>
+      <nuclide ao="0.00041978973199999995" name="C0"/>
       <nuclide ao="0.0071026" name="O16"/>
     </material>
     <material id="6">
       <density units="atom/b-cm" value="0.085432"/>
-      <nuclide ao="0.0006633688776000001" name="C12"/>
-      <nuclide ao="7.4311224e-06" name="C13"/>
+      <nuclide ao="0.0006633688776000001" name="C0"/>
+      <nuclide ao="7.4311224e-06" name="C0"/>
       <nuclide ao="3.0603e-05" name="P31"/>
       <nuclide ao="3.5113751800400004e-05" name="S32"/>
       <nuclide ao="2.766110074e-07" name="S33"/>
@@ -321,8 +321,8 @@
     </material>
     <material id="18">
       <density units="atom/b-cm" value="0.035318"/>
-      <nuclide ao="0.00029749740525999996" name="C12"/>
-      <nuclide ao="3.3325947399999996e-06" name="C13"/>
+      <nuclide ao="0.00029749740525999996" name="C0"/>
+      <nuclide ao="3.3325947399999996e-06" name="C0"/>
       <nuclide ao="0.0015821" name="Si28"/>
       <nuclide ao="8.0109e-05" name="Si29"/>
       <nuclide ao="5.3177e-05" name="Si30"/>
@@ -1227,9 +1227,9 @@
   </geometry>
   <settings>
     <run_mode>eigenvalue</run_mode>
-    <particles>100</particles>
-    <batches>40</batches>
-    <inactive>20</inactive>
+    <particles>10000</particles>
+    <batches>550</batches>
+    <inactive>50</inactive>
     <source particle="neutron" strength="1.0" type="independent">
       <space type="point">
         <parameters>0.0 0.0 0.0</parameters>
