@@ -1226,10 +1226,10 @@
     <surface boundary="vacuum" coeffs="0.0 0.0 0.0 50" id="13000" type="sphere"/>
   </geometry>
   <settings>
-    <run_mode>volume</run_mode>
-    <particles>100</particles>
-    <batches>40</batches>
-    <inactive>20</inactive>
+    <run_mode>eigenvalue</run_mode>
+    <particles>10000</particles>
+    <batches>550</batches>
+    <inactive>50</inactive>
     <source particle="neutron" strength="1.0" type="independent">
       <space type="point">
         <parameters>0.0 0.0 0.0</parameters>
@@ -1244,7 +1244,7 @@
       <samples>10000</samples>
       <lower_left>-12 -12 -12</lower_left>
       <upper_right>12 12 12</upper_right>
-      <threshold threshold="10.0" type="std_dev"/>
+      <threshold threshold="1.0" type="std_dev"/>
     </volume_calc>
   </settings>
   </model>
