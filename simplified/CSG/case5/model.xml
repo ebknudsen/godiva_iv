@@ -411,5 +411,13 @@
     <output>
       <summary>true</summary>
     </output>
+    <volume_calc>
+      <domain_type>material</domain_type>
+      <domain_ids>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18</domain_ids>
+      <samples>10000</samples>
+      <lower_left>-12 -12 -12</lower_left>
+      <upper_right>12 12 12</upper_right>
+      <threshold threshold="1.0" type="std_dev"/>
+    </volume_calc>
   </settings>
   </model>
