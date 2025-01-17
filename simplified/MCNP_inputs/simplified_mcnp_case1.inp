@@ -1,0 +1,428 @@
+                                       NEA/NSC/DOC/(95)03/II
+                                            Volume II
+
+                                         HEU-MET-FAST-086
+
+
+
+
+                              APPENDIX A: TYPICAL INPUT LISTINGS
+
+
+A.1 MCNP Input Listings
+
+The MCNP input files listed below employ continuous-energy cross sections derived from
+ENDF/B-VI. They are identical to MCNP input files for other nuclear data libraries, with two
+exceptions. First, of course, the suffixes of the ZAID identifiers for the various nuclides would be
+different. Second, ENDF/B-VI contains nuclear data for the element molybdenum, while the other
+libraries contain nuclear data for its isotopes.
+
+These particular cases employ 550 generations of 10,000 neutrons each, and exclude the first 50
+generations from the statistics. Consequently, the results they produce are based on 5,000,000
+active histories.
+
+
+MCNP Input Listing for Case 1 of Table 45.
+
+Godiva-IV HEU-MET-FAST-086 Case 1 DC BR In LDN Masses BMark Model E-VI RN2
+c Core
+c Spindle
+1        1   0.088296      1   -2    4  -5        $ Spindle
+2        1   0.088296      2   69 -85 -86         $ Nut on Spindle
+c Homogenized Inner Subassembly Plate
+3        7   0.047627      2   -7    8  -9        $ Bottom of ISP
+4        7   0.047627      2   -6    9 -11        $ Lower Middle of ISP
+5        7   0.047627      2   -7   11 -12        $ Upper Middle of ISP
+6        7   0.047627     10   -7   12 -13        $ Top of ISP
+c Safety Block
+7        6   0.047100      2 -14    16 -15        $ Cylindrical Safety Block
+c Safety Block Base
+8        1   0.088296    -17   19 -20             $ SB Base Bottom
+9        1   0.088296    -16 -18    20            $ SB Base Wide
+10       1   0.088296     -2 -15    16            $ SB Base Top
+c Notches for Homogenized Fuel Ring
+11       0               -24   30 -31   34 -35
+                          36 #57                  $ Right Notch
+12       0               -24   30 -31 -37 -39
+                          40 #58                  $ Front Left Notch
+13       0               -24   30 -31 -38 -41
+                          42 #59                  $ Back Left Notch
+c Homogenized Fuel Ring
+14       5   0.047622    -24   25   26  27  28
+                          62 -29 #11 #12 #13
+                         #57 #58 #59              $ Btm Outer Annulus
+15       5   0.047622     22   28 -29 -61
+                          25   26   27            $ Btm Inner Annulus
+16       5   0.047622     -9   22 -24   25  26
+                          27   29 #11 #12 #13
+                         #57 #58 #59              $ Lower Middle Annulus
+17       5   0.047622      9   21 -24   25  26
+                          27 -31 #11 #12 #13
+                         #57 #58 #59              $ Middle Annulus
+18       5   0.047622    -11   21 -24   31
+                         #11 #12 #13 #57 #58
+                         #59                      $ Lower Center Annulus
+
+Revision: 0
+   Date: September 30, 2012                  Page 118 of 241
+                                     NEA/NSC/DOC/(95)03/II
+                                          Volume II
+
+                                      HEU-MET-FAST-086
+
+
+
+
+19      5    0.047622     11    22    -24     -32   #11
+                         #12   #13
+                         #57   #58    #59                     $ Upper Center Annulus
+20      5    0.047622     22    32    -33     -64             $ Inner Top Annulus
+21      5    0.047622    -24    32    -33      65
+                         #11   #12    #13
+                         #57   #58    #59           $ Outer Top Annulus
+c Control and Burst Rods
+22      0                -25   59 -31               $ Hole above Control Rod 1
+23      0                -25   44   51 -59          $ Gap between CR1 & Rings
+24      0                -43   57 -59               $ Top Hole in CR1
+25      8    0.048437     43 -44    51 -54          $ Bottom Region, CR1
+26      8    0.048437    -44   54 -57               $ Solid Middle Region, CR1
+27      8    0.048437     43 -44    57 -59          $ Top Region, CR1
+28      0                -27   60 -31               $ Hole above Control Rod 2
+29      0                -27   48   52 -60          $ Gap between CR2 & Rings
+30      0                -47   58 -60               $ Top Hole in CR2
+31      8    0.048437     47 -48    52 -55          $ Bottom Region, CR2
+32      8    0.048437    -48   55 -58               $ Solid Middle Region, CR2
+33      8    0.048437     47 -48    58 -60          $ Top Region, CR2
+34      0                -26 -31    56              $ Hole above Burst Rod
+35      0                -26   46   28 -56          $ Gap between BR & Rings
+36      9    0.049553     45 -46    49 -50          $ Bottom Region, Burst Rod
+37      9    0.049553    -46   50 -53               $ Middle Region, BR
+38      9    0.049553     45 -46    53 -56          $ Top Region, Burst Rod
+39      0                -45   53 -56               $ Cylinder, BR Pin
+40      0                -43   51 -54               $ Bottom Hole, CR1
+41      0                -47   52 -55               $ Bottom Hole, CR2
+42      0                -45   49 -50               $ Bottom Hole, Burst Rod
+c Support-Pad Ring and Bearing Ring
+43      2    0.086010    -29   61 -62    63
+                          25   26   27              $ Support-Pad Ring
+44      2    0.086010     32   64 -65 -66           $ Solid Bearing Ring
+c Subassembly Cover Plate
+45      0                  3   13 -67 -69           $ Central Hole in SCP
+46      0                 13 -22    67 -68          $ Inner Void in SCP
+47      2    0.086010     22   33 -23 -69           $ Edge of SCP
+48      2    0.086010    -22   67   68 -69          $ Center of SCP
+c Mounting Plate
+49      0                -70   74 -75               $ Empty Central Hole
+50      0                 25 -71    74 -75          $ Empty Hole for CR1
+51      0                 26 -72    74 -75          $ Empty Hole for Burst Rod
+52      0                 27 -73    74 -75          $ Empty Hole for CR2
+53      4    0.058593     70   71   72   73  74
+                         -75 -87                    $ Mounting Plate
+c Clamp Supports (Legs)
+54      1    0.088296     75 -76    77 -78   79
+                         -80                        $ Rectangular Right Leg
+55      like 54 but trcl (0 0 0 -0.5 -0.8660254 0
+                           -0.8660254 -0.5 0 0 0 1) $ Front Bolt for FL Leg
+56      like 54 but trcl (0 0 0 -0.5 0.8660254 0
+                           -0.8660254 0.5 0 0 0 1) $ Front Bolt for BL Leg
+c Clamps
+57      3    0.083675     34 -35 -79
+                          63 -66    84              $ Middle of Clamp Back
+58      like 57 but trcl (0 0 0 -0.5 -0.8660254 0
+                           -0.8660254 -0.5 0 0 0 1) $ Middle of Clamp Back
+59      like 57 but trcl (0 0 0 -0.5 0.8660254 0
+                           -0.8660254 0.5 0 0 0 1) $ Middle of Clamp Back
+60      3    0.083675     34 -35 -63 -79     81
+                          83                        $ Bottom Prong, Back Leg
+61      like 60 but trcl (0 0 0 -0.5 -0.8660254 0
+                                                                              Revision: 0
+                                            Page 119 of 241                      Date: September 30, 2012
+                                    NEA/NSC/DOC/(95)03/II
+                                         Volume II
+
+                                      HEU-MET-FAST-086
+
+
+
+
+                           -0.8660254 -0.5 0 0 0 1) $ Bottom Prong, FL Leg
+62      like 60 but trcl (0 0 0 -0.5 0.8660254 0
+                           -0.8660254 0.5 0 0 0 1) $ Bottom Prong, FL Leg
+63      3    0.083675     34 -35 -79 -82     66
+                          83                        $ Top Prong, Back Leg
+64      like 63 but trcl (0 0 0 -0.5 -0.8660254 0
+                           -0.8660254 -0.5 0 0 0 1) $ Top Prong, FL Leg
+65      like 63 but trcl (0 0 0 -0.5 0.8660254 0
+                           -0.8660254 0.5 0 0 0 1) $ Top Prong, FL Leg
+c Outer Void Regions
+66      0                 17   19 -20 -22        $ Cyl Gap below Platform
+67      0                -16   18   20 -22       $ Gap outside Platform
+68      0                  7    8   -9 -22
+69      0                  6    9 -11 -21        $ Fuel Annulus / ISP Gap
+c Inner Void Regions
+70      0                  5 -82 -87
+                         #63 #64 #65
+71      0                 -5   24   75 -87   88
+                          89 #54 #57 #60 #63 $ BR Void above Mntg Plate
+72      0                 -5   24   75 -87 -88
+                          89 #54 #57 #60 #63 $ FR Void above Mntg Plate
+73      0                 -5   24   75 -87 -88
+                         -89 #55 #58 #61 #64 $ FL Void above Mntg Plate
+74      0                 -5   24   75 -87   88
+                         -89 #56 #59 #62 #65 $ BL Void above Mntg Plate
+75      0                 23   33 -64 -69        $ Gap between SCP and BRing
+76      0                -25   74 -51            $ Void below Control Rod 1
+77      0                -27   74 -52            $ Void below Control Rod 2
+78      0                -26   74 -49            $ Hole below Burst Rod
+79      0                -26 -28    46   49      $ Void around Burst Rod
+80      0                 22 -24    25   26  27
+                         -63   75 #60 #61 #62 $ Void below Sup Pad Cyl
+81      0                -24   25   26   27 -28
+                          62   63 #57 #58 #59 $ Void Sup Pad Cyl
+82      0                 22   25   26   27 -28
+                         -61   63                $ Void inside Sup Pad Cyl
+83      0                -19 -22    75           $ Void below Sfty Blk Base
+84      0                 22 -64 -66     69      $ Void inside Bearing Ring
+85      0                 22 -24    33   65 -66 $ Void outside Bearing Ring
+                         #57 #58 #59             $ Void outside Bearing Ring
+86      0                 -5   22 -24    66
+                         #63 #64 #65             $ Void above Bearing Ring
+87      0                 -8   14   16 -22
+88      0                  7   11 -13 -22        $ Upr ISP / Fuel Ring Gap
+89      0                  2   -5 -22    69  #2 $ Spindle / Fuel Ring Gap
+90      0                  2   -3   12 -69       $ Gap around Spindle
+91      0                 -8 -14    15
+92      0                 -2   -4    8           $ Space below Spindle
+93      0                 -1    4   -5           $ Lower Glory Hole
+94      0                  3 -10    12 -13       $ ISP - Spindle Gap
+c External Void Regions
+95      0                 82
+96      0                -82   74   87
+97      0                -74
+
+c    Surfaces for Spindle
+1       cz   0.31750                               $ Glory-Hole Radius
+2       cz   1.27000                               $ Spindle Bottom Middle OR
+3       cz   1.42875                               $ Spindle Top Middle OR
+4       pz   0.00254                               $ Bottom of Spindle
+5       pz 11.43254                                $ Top of Spindle
+c    Surfaces for Intermediate Inner Subassembly Plate
+Revision: 0
+   Date: September 30, 2012              Page 120 of 241
+                                  NEA/NSC/DOC/(95)03/II
+                                       Volume II
+
+                                   HEU-MET-FAST-086
+
+
+
+
+6    cz   3.92430                               $ OR of Inner Sub Plate
+7    cz   4.38150                               $ OR of Lower Inner Sub Plate
+8    pz   0.0                                   $ Bottom of Inner Sub Plate
+9    pz   2.54000                               $ Top of ISP Wide Region
+10   cz   3.50520                               $ Upper IR of ISP
+11   pz   4.96570                               $ Top of ISP Indentation
+12   pz   6.98754                               $ Bottom of ISP Inner Annulus
+13   pz   7.64794                               $ Top of Innerr Sub Plate
+c Surfaces for Safety Block
+14   cz   4.29260                               $ Safety Block Outer Radius
+15   pz -0.25400                                $ Top of Safety Block
+16   pz -7.85128                                $ Bottom of Safety Block
+c Surfaces for Safety Block Base
+17   cz   2.45000                               $ OR of SB Base Middle
+18   cz   3.65760                               $ OR of SB Base Platform
+19   pz -12.81320                               $ Bottom of SB Base
+20   pz -9.30148                                $ Bottom of SB Base Platform
+c Surfaces for Fuel Rings
+21   cz   3.97510                               $ Smaller IR of Fuel Ring
+22   cz   4.44500                               $ Larger IR of Fuel Ring
+23   cz   5.08000                               $ IR of Sup Pad Slot
+24   cz   8.89000                               $ OR of FuelRing
+25   c/z 3.33375    -5.774224   1.11125         $ FR Hole, Control or Burst Rod
+26   c/z -6.66750    0.0        1.11125         $ Lt Hole, Control or Burst Rod
+27   c/z 3.33375     5.774224   1.11125         $ BR Hole, Control or Burst Rod
+28   pz -7.80455                                $ Bottom of Ring
+29   pz -7.43839                                $ Bottom of Ring Slot
+30   pz -4.89458                                $ Bottom of Ring Outer Edge
+31   pz   4.64820                               $ Top of Ring Outer Edge
+32   pz   7.27160                               $ Bottom of Bearing Ring
+33   pz   7.78416                               $ Top of Fuel Ring
+34   py -1.11125                                $ Front Edge of Left Notch
+35   py   1.11125                               $ Back Edge of Left Notch
+36   px   8.49376                               $ Back Edge of Left Notch
+37   p    1.0        1.7320508 0.0 -16.9857200 $ Back Edge, BL Notch
+38   p    1.0       -1.7320508 0.0 -16.9857200 $ Back Edge, BR Notch
+39   p    1.7320508 -1.0        0.0   1.9247415 $ Lower Edge, BL Notch
+40   p    1.7320508 -1.0        0.0 -1.9247415 $ Upper Edge, BL Notch
+41   p    1.7320508 1.0         0.0   1.9247415 $ Lower Edge, BR Notch
+42   p    1.7320508 1.0         0.0 -1.9247415 $ Upper Edge, BR Notch
+c Surfaces for Control Rods and Burst Rod
+43   c/z 3.33375    -5.774224   0.47625         $ Control Rod 1 IR
+44   c/z 3.33375    -5.774224   1.09220         $ Control Rod 1 OR
+45   c/z -6.66750    0.0        0.47625         $ Burst Rod IR
+46   c/z -6.66750    0.0        1.09220         $ Burst Rod OR
+47   c/z 3.33375     5.774224   0.47625         $ Control Rod 2 IR
+48   c/z 3.33375     5.774224   1.09220         $ Control Rod 2 OR
+49   pz -10.79627                               $ Bottom of Burst Rod (Full In)
+50   pz -8.89127                                $ Top of Burst Rod Bottom Hole
+51   pz -19.84121                               $ Bottom of Control Rod 1
+52   pz -12.02055                               $ Bottom of Control Rod 2
+53   pz -1.27127                                $ Flat Bottom of BR Top Hole
+54   pz -17.93621                               $ Top of CR1 Bottom Hole
+55   pz -10.11155                               $ Top of CR2 Bottom Hole
+56   pz   1.90373                               $ Top of Burst Rod (Full In)
+57   pz -9.04621                                $ Bottom of CR1 Top Hole
+58   pz -1.22555                                $ Bottom of CR2 Top Hole
+59   pz -7.14121                                $ Top of Control Rod 1
+60   pz   0.67945                               $ Top of Control Rod 2
+c Surfaces for Support-Pad Ring
+61   cz   5.71695                               $ Inner Radius of Supt Pad Cyl
+62   cz   7.29488                               $ Outer Radius of Supt Pad Cyl
+                                                                     Revision: 0
+                                      Page 121 of 241                   Date: September 30, 2012
+                                         NEA/NSC/DOC/(95)03/II
+                                              Volume II
+
+                                          HEU-MET-FAST-086
+
+
+
+
+63   pz -9.02589                                         $ Bottom of Support Pad Cyl
+c Surfaces for Bearing Ring
+64   cz   5.08381                                        $ Inner Radius of Bearing Ring
+65   cz   7.29615                                        $ Outer Radius of Bearing Ring
+66   pz   8.75411                                        $ Top of Bearing Ring
+c Surfaces for Subassembly Cover Plate
+67   cz   1.43510                                        $ Radius of Central Hole in SCP
+68   pz   8.00680                                        $ Top of SCP Raised Edge
+69   pz   8.32430                                        $ Top of Subassembly Cvr Plate
+c Surfaces for Mounting Plate
+70   cz   5.23875                                        $ Radius of Central Hole in MP
+71   c/z 3.33375    -5.774224   1.27000                  $ FR Hole for Control Rod 1
+72   c/z -6.66750    0.0        1.27000                  $ Left Hole for Burst Rod
+73   c/z 3.33375     5.774224   1.27000                  $ BR Hole for Control Rod 2
+74   pz -20.37715                                        $ Bottom of Mounting Plate
+75   pz -16.56715                                        $ Top of Mounting Plate
+c Surfaces for Clamp Support (Leg)
+76   pz    4.38785                                       $ Top of Right Leg
+77   py   -1.42875                                       $ Front Edge of Right Leg
+78   py    1.42875                                       $ Back Edge of Right Leg
+79   px   12.94130                                       $ Right Edge of Right Leg Inset
+80   px   18.94130                                       $ Right Edge of Right Leg
+c Surfaces for Clamp
+81   pz -12.67587                                        $ Bottom of Clamp
+82   pz   12.40409                                       $ Top of Clamp
+83   px    5.08000                                       $ Left Edge of Prongs
+84   px    8.49630                                       $ Left Edge of Clamp Back
+c Surfaces for Nuts and Bolts
+85   cz    2.22250                                       $ OR for Nut on Spindle
+86   pz    9.59430                                       $ Top of Nut on Spindle
+c
+87   cz   44.45                                          $ Otr Radius of Mounting Plate
+88   py    0.0
+89   px    0.0
+
+mode         n
+kcode        10000    1.0    50    550
+rand         hist=7314730
+kopts        kinetics=yes
+imp:n        1.0    93r    0.0     2r
+ksrc         0.0    0.0   -1.0
+c            SS 303 (8.0 g/cc)
+m1            6000.66c     3.0083e-4
+             14028.62c     1.5821e-3         14029.62c          8.0109e-5
+             14030.62c     5.3177e-5
+             15031.66c     1.5554e-4
+             16000.62c     4.5067e-4
+             24050.62c     7.2466e-4         24052.62c          1.3974e-2
+             24053.62c     1.5844e-3         24054.62c          3.9443e-4
+             25055.62c     8.7693e-4
+             26054.62c     3.5742e-3         26056.62c          5.5564e-2
+             26057.62c     1.2722e-3         26058.62c          1.6962e-4
+             28058.62c     5.0437e-3         28060.62c          1.9282e-3
+             28061.62c     8.3482e-5         28062.62c          2.6522e-4
+             28064.62c     6.7229e-5
+             42000.66c     1.5065e-4
+c            SAE 4340 (7.85 g/cc)
+m2            6000.66c     1.5940e-3
+             14028.62c     3.4929e-4         14029.62c          1.7686e-5
+             14030.62c     1.1740e-5
+             15031.66c     2.7472e-5
+             16000.62c     2.9481e-5
+Revision: 0
+   Date: September 30, 2012                   Page 122 of 241
+                                 NEA/NSC/DOC/(95)03/II
+                                      Volume II
+
+                                   HEU-MET-FAST-086
+
+
+
+
+        24050.62c     3.1603e-5       24052.62c     6.0944e-4
+        24053.62c     6.9097e-5       24054.62c     1.7202e-5
+        25055.62c     6.2385e-4
+        26054.62c     4.7824e-3       26056.62c     7.4345e-2
+        26057.62c     1.7022e-3       26058.62c     2.2696e-4
+        28058.62c     9.8985e-4       28060.62c     3.7842e-4
+        28061.62c     1.6384e-5       28062.62c     5.2051e-5
+        28064.62c     1.3194e-5
+        42000.66c     1.2319e-4
+c       VascoMax 300 (8.0 g/cc)
+m3       6000.66c     8.0221e-5
+        13027.62c     1.7855e-4
+        14028.62c     7.9104e-5       14029.62c     4.0054e-6
+        14030.62c     2.6588e-6
+        15031.66c     7.7770e-6
+        16000.62c     7.5112e-6
+        22000.62c     7.3453e-4
+        25055.62c     4.3847e-5
+        26054.62c     3.4070e-3       26056.62c     5.2965e-2
+        26057.62c     1.2127e-3       26058.62c     1.6169e-4
+        27059.66c     7.1938e-3
+        28058.62c     1.0367e-2       28060.62c     3.9635e-3
+        28061.62c     1.7160e-4       28062.62c     5.4518e-4
+        28064.62c     1.3819e-4
+        42000.66c     2.4103e-3
+c       Pure Aluminum
+m4      13027.62c     5.8593e-2
+c       HEU + Mo (93.15 wt.% for Homogenized Ring)
+m5      42000.66c     1.7030e-3
+        92233.66c     4.6343e-6       92234.66c     4.7016e-4
+        92235.66c     4.2801e-2       92236.66c     3.1112e-4
+        92238.66c     2.3328e-3
+c       HEU + Mo (93.17 wt.% for Safety Block)
+m6      42000.66c     1.1399e-3
+        92233.66c     4.6384e-6       92234.66c     4.7068e-4
+        92235.66c     4.2848e-2       92236.66c     3.1140e-4
+        92238.66c     2.3253e-3
+c       HEU + Mo (93.16 wt.% for Homogenized ISP)
+m7      42000.66c     1.7248e-3
+        92233.66c     4.6326e-6       92234.66c     4.7007e-4
+        92235.66c     4.2791e-2       92236.66c     3.1101e-4
+        92238.66c     2.3249e-3
+c       HEU + Mo (93.16 wt.% for Control Rods 1 and 2)
+m8      42000.66c     1.5550e-3
+        92233.66c     4.7315e-6       92234.66c     4.8008e-4
+        92235.66c     4.3703e-2       92236.66c     3.1765e-4
+        92238.66c     2.3767e-3
+c       HEU + Mo (93.16 wt.% for Burst Rod)
+m9      42000.66c     1.5909e-3
+        92233.66c     4.8405e-6       92234.66c     4.9114e-4
+        92235.66c     4.4710e-2       92236.66c     3.2497e-4
+        92238.66c     2.4314e-3
+c
+totnu
+prdmp   j      575
+print
+
+end of input
+
+
+
+
+                                                                Revision: 0
+                                      Page 123 of 241              Date: September 30, 2012
+
