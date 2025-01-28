@@ -137,7 +137,7 @@ set x2label ""
 set x2label  font "" textcolor lt -1 norotate
 set xrange [ * : * ] noreverse writeback
 set x2range [ * : * ] noreverse writeback
-set ylabel "volume difference / cm^3" 
+set ylabel "rel. volume difference %" 
 set ylabel  font "" textcolor lt -1 rotate
 set y2label "" 
 set y2label  font "" textcolor lt -1 rotate
@@ -178,6 +178,7 @@ GNUTERM = "qt"
 I = {0.0, 1.0}
 VoxelDistance = 0.0
 ## Last datafile plotted: "GODIVA_IV_volumes.dat"
-#plot 'GODIVA_IV_volumes_cleaned.dat' u :(($2-$4)-($3+$5)):(($2-$4)+($3+$5)):xtic(1) index 0 with filledcurves notitle, 'GODIVA_IV_volumes_cleaned.dat' u :(($2-$4)) index 0 with lines lt 1 notitle
-plot 'GODIVA_IV_volumes_cleaned.dat' u :(($2-$4)-($3+$5)):(($2-$4)+($3+$5)):xtic(1) index 1 with filledcurves lt 2 notitle, 'GODIVA_IV_volumes_cleaned.dat' u :(($2-$4)) index 1 with lines lt 2 notitle
+plot\
+'GODIVA_IV_volumes_cleaned.dat' u ($0):(100*(($2-$4)-($3+$5))/$2):(100*(($2-$4)+($3+$5))/$2):xtic(1) index 1 with filledcurves lt 2 notitle, 'GODIVA_IV_volumes_cleaned.dat' u ($0):(100*($2-$4)/$2) index 1 with lines lt 2 notitle,\
+'GODIVA_IV_volumes_cleaned.dat' u ($0+32):(100*(($2-$4)-($3+$5))/$2):(100*(($2-$4)+($3+$5))/$2):xtic(1) index 0 with filledcurves notitle, 'GODIVA_IV_volumes_cleaned.dat' u ($0+32):(100*($2-$4)/$2) index 0 with lines lt 1 notitle
 #    EOF
